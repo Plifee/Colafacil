@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ColaFácil - Chat Privado</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- TELA DE LOGIN -->
+
+    <section class="login-container" id="login-container">
+
+        <div class="login-box">
+
+            <div class="login-logo">📋</div>
+
+            <h1>ColaFácil</h1>
+
+            <p class="login-subtitle">
+            vai melhorar !
+            </p>
+
+            <form id="login-form">
+
+                <input
+                    type="email"
+                    id="login-email"
+                    placeholder="Digite seu e-mail"
+                    autocomplete="username"
+                    required
+                >
+
+                <input
+                    type="password"
+                    id="login-password"
+                    placeholder="Digite sua senha"
+                    autocomplete="current-password"
+                    required
+                >
+
+                <button type="submit" id="login-btn">
+                    ENTRAR
+                </button>
+
+            </form>
+
+            <p id="login-error"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- TELA DO CHAT -->
+
+    <div class="chat-container" id="chat-container" hidden>
+
+        <header class="chat-header">
+
+            <div class="logo">
+                📋 ColaFácil
+            </div>
+
+            <div class="header-right">
+
+                <div class="status">
+                    <span class="status-dot"></span>
+                    <span id="status-text">Conectando...</span>
+                </div>
+
+                <button id="logout-btn" type="button">
+                    Sair
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- MENSAGENS -->
+
+        <main class="chat-messages" id="chat-messages">
+
+            <div class="welcome-message">
+                👋 Bem-vindo ao ColaFácil!
+
+                <p>
+                    Envie mensagens e compartilhe prints rapidamente.
+                </p>
+            </div>
+
+        </main>
+
+
+        <!-- PRÉ-VISUALIZAÇÃO -->
+
+        <div class="image-preview" id="image-preview">
+
+            <img id="preview-img" alt="Imagem selecionada">
+
+            <button id="remove-image" type="button">
+                ✖
+            </button>
+
+        </div>
+
+
+        <!-- CAMPO DE MENSAGEM -->
+
+        <footer class="chat-footer">
+
+            <button id="attach-btn" type="button" title="Anexar imagem">
+                📎
+            </button>
+
+            <input
+                type="file"
+                id="file-input"
+                accept="image/*"
+                hidden
+            >
+
+            <textarea
+                id="message-input"
+                placeholder="Digite uma mensagem ou cole um print..."
+                rows="1"
+            ></textarea>
+
+            <button id="send-btn" type="button">
+                ➤
+            </button>
+
+        </footer>
+
+    </div>
+
+    <script type="module" src="js/chat.js"></script>
+
+</body>
+</html>
